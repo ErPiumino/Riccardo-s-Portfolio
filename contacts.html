@@ -53,19 +53,36 @@
 
     </header>
 
-
-    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
-      <fieldset id="fs-frm-inputs">
-        <label for="full-name">Name</label>
-        <input type="text" name="name" id="full-name" placeholder="Enter your Name" required="">
-        <label for="email-address">Email Address</label>
-        <input type="email" name="_replyto" id="email-address" placeholder="example@email.com" required="">
-        <label for="message">Message</label>
-        <textarea rows="5" name="message" id="message" placeholder="Enter your message." required=""></textarea>
-        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-      </fieldset>
-      <input type="submit" value="Submit">
-    </form>
+    <div class="box">
+      <div class="big-main">
+        <div class="main" style="margin-top: 84px;">
+          <div class="title">Contact me</div>
+          <div class="text" style="color: var(--gray); font-size: 28px; max-width: fit-content;">Feel free to contact me for every question or issue.</div>
+        </div>
+        <div class="main" style="margin-top: 14px;">
+          <div class="title">Follow me</div>
+          <div class="text" style="color: var(--gray); font-size: 28px; max-width: fit-content;">Stay tuned in order to see my growth.</div>
+          <div class="social">
+            <a id="insta" href="https://www.instagram.com/riccardomordente/" class="fa fa-instagram" target="_blank"></a>
+            <a id="github" href="https://github.com/ErPiumino"class="fa fa-github" target="_blank"></a>
+            <a id="mail" href="mailto: riccardo.mordente@gmail.com"class="fa fa-envelope" target="_blank"></a>
+            <a id="whatsapp" href="sms:(+39)(3202921779)" class="fa fa-whatsapp" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xqkrbqvq" method="post">
+        <fieldset id="fs-frm-inputs">
+          <label for="full-name"></label>
+          <input type="text" name="name" id="full-name" placeholder="Enter your Name" required="" size="60">
+          <label for="email-address"></label>
+          <input type="email" name="_replyto" id="email-address" placeholder="Enter your Email" required="" size="60">
+          <label for="message"></label>
+          <textarea rows="5" cols="60" name="message" id="message" placeholder="Enter your message" required="" maxlength="100"></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
 <script src="./script.js"></script>
 
 

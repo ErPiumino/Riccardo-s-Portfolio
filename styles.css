@@ -158,10 +158,28 @@ header{
     background-color: var(--orange-hover);
 }
 
+.project-boxes>*{
+    color: black;
+    text-align: center;
+    background-color: var(--background);
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    margin: 20px;
+    width: 250px;
+    height: 224px;
+    margin: 50px;
+}
+
+.project-boxes{
+    max-width: max-content;
+    display: flex;
+    flex-direction: row;
+}
+
 /*-------------------------Code for svg and photo-------------------------*/
 
 .box{
-    max-width: 1500px;
+    max-width: 1400px;
     margin-left: 200px;
     display: flex;
     justify-content: space-between;
@@ -178,7 +196,19 @@ header{
     bottom: 0;
 }
 
-/*Code for dropdown menu*/
+.rectangle img{
+    position: absolute;
+    right: 250px;
+    bottom: 220px;
+}
+
+.rectangle svg{
+    position: absolute;
+    right: 120px;
+    bottom: 220px;
+}
+
+/*-------------------------Code for dropdown menu-------------------------*/
 
 .dropdown{
     margin: 0 auto;
@@ -249,6 +279,18 @@ padding-left: 50%;
     }
 }
 
+@media only screen and (max-width: 1750px) {
+    .rectangle {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    .rectangle {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .navbar-right {
         display: none;
@@ -267,7 +309,25 @@ padding-left: 50%;
     }
 }
 
+@media only screen and (max-width: 1700px) {
+    form {
+        display: none;
+    }
+}
+
 /*-------------------------Code for the Form-------------------------*/
+
+form{
+    background-color: var(--orange);
+    width: 600px;
+    float: right;
+    margin-top: 170px;
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    box-shadow: 9px 5px 11px -3px rgba(0,0,0,0.57);
+-webkit-box-shadow: 9px 5px 11px -3px rgba(0,0,0,0.57);
+-moz-box-shadow: 9px 5px 11px -3px rgba(0,0,0,0.57);
+}
 
 #fs-frm input,
 #fs-frm select,
@@ -278,24 +338,25 @@ padding-left: 50%;
 #fs-frm #card-element:disabled {
   font-family: inherit;
   font-size: 100%;
-  color: inherit;
   border: none;
   border-radius: 0;
   display: block;
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 10;
   -webkit-appearance: none;
   -moz-appearance: none;
+  color: white;
 }
 #fs-frm label,
 #fs-frm legend,
 #fs-frm ::placeholder {
-  font-size: .825rem;
+  font-size: 28;
   margin-bottom: .5rem;
   padding-top: .2rem;
   display: flex;
   align-items: baseline;
+  color: rgba(255, 255, 255, 0.62);
 }
 
 /* border, padding, margin, width */
@@ -303,23 +364,24 @@ padding-left: 50%;
 #fs-frm select,
 #fs-frm textarea,
 #fs-frm #card-element {
-  border: 1px solid rgba(0,0,0,0.2);
-  background-color: rgba(255,255,255,0.9);
+  background-color: var(--orange);
   padding: .75em 1rem;
   margin-bottom: 1.5rem;
+  max-width: max-content;
+  border-bottom: solid white;
 }
 #fs-frm input:focus,
 #fs-frm select:focus,
 #fs-frm textarea:focus {
-  background-color: white;
+  background-color: var(--orange);
   outline-style: solid;
   outline-width: thin;
-  outline-color: gray;
+  outline-color: var(--orange);
   outline-offset: -1px;
 }
 #fs-frm [type="text"],
 #fs-frm [type="email"] {
-  width: 100%;
+  width: fit-content;
 }
 #fs-frm [type="button"],
 #fs-frm [type="submit"],
@@ -329,6 +391,11 @@ padding-left: 50%;
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
+  background-color: white;
+  border-radius: 40px;
+  padding: 10px 40px 10px 40px;
+  color: var(--orange);
+  font-size: 18px;
 }
 #fs-frm [type="button"]:focus,
 #fs-frm [type="submit"]:focus,
@@ -358,20 +425,6 @@ padding-left: 50%;
   appearance: radio;
 }
 
-/* address, locale */
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-  display: inline;
-}
-#fs-frm fieldset.locale input[name="city"] {
-  width: 52%;
-}
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-  width: 20%;
-}
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"] {
-  margin-right: 3%;
+textarea {
+    resize: none;
 }
