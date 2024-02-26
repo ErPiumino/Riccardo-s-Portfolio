@@ -1,0 +1,268 @@
+/*Custom Colors for the website*/
+:root{
+    --background: #EBEBEB;/*This should be dark grey, almost black*/
+    --text: #707070;
+    --gray-hover: #ADADAD;
+    --orange-hover: #FFCA9D;
+    --orange: #FFB16E;
+}
+
+.error {color: #FF0000;}
+
+body{
+    font-family: futura-pt, sans-serif;
+}
+
+footer{
+    position: fixed;
+    background-color: var(--background);
+    width: 100%;
+    color: var(--text);
+    padding: 35px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    margin: 0 auto;
+}
+
+header{
+    font-size: 20px;
+    width: 100%;
+    color: var(--text);
+    padding: 40px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    right: 0;
+    margin: 0 auto;
+    max-width: 1500px;
+    justify-content: space-between;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right{
+    display: inline-block;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    margin-right: 40px;
+}
+
+.navbar-right>*{
+    margin-right: 60px;
+}
+
+.navbar-right a{
+    color: var(--text);
+    text-decoration: none;
+}
+
+.clickable:hover{
+    color: var(--gray-hover);
+}
+
+.navbar-left{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-left>*{
+    margin-right: 20px;
+}
+
+.main{
+    font-size: 28px;
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+    padding: 40px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    right: 0;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.title{
+    float: left;
+    font-size: 57px;
+    font-weight: 600;
+    color: black;
+    margin-top: auto;
+}
+
+.subtitle{
+    font-size: 37px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    max-width: 100px;
+}
+
+.text{
+    max-width: 450px;
+}
+
+.buttons{
+    margin-top: 60px;
+}
+
+.buttons a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.buttons>*{
+    margin-right: 40px;
+}
+
+#projects, #skills{
+    background-color: var(--orange);
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+}
+
+#projects:hover, #skills:hover{
+    background-color: var(--orange-hover);
+}
+
+.fa{
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: var(--orange);
+}
+
+.social{
+    margin-top: 60px;
+}
+
+.social>*{
+    margin-right: 48px;
+}
+
+.fa:hover{
+    background-color: var(--orange-hover);
+}
+
+/*Code for svg and photo*/
+
+.box{
+    max-width: 1500px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box svg{
+    position: absolute;
+    right: 200px;
+}
+
+.box img{
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+}
+
+/*Code for dropdown menu*/
+
+.dropdown{
+    margin: 0 auto;
+    margin-right: 100px;
+}
+  
+#drop-down-menu{
+    cursor: pointer;
+}
+
+.dropdown-content {
+list-style: none;
+position: absolute;
+top: 3.2em;
+width: 90%;
+left: 0;
+visibility: hidden;
+overflow: hidden;
+align-items: center;
+}
+
+.dropdown-content li {
+background: var(--background);
+border-radius: 0.5em;
+position: relative;
+left: 100%;
+transition: 0.5s;
+transition-delay: calc(60ms * var(--delay));
+align-items: center;
+}
+
+.dropdown:focus-within .dropdown-content li {
+left: 0;
+}
+
+.dropdown:focus-within .dropdown-content {
+visibility: visible;
+}
+
+.dropdown:focus-within .dropdown-btn > .arrow {
+transform: rotate(180deg);
+}
+
+.dropdown-content li a{
+display: flex;
+padding: 0.5em 0.5em;
+color: var(--text);
+margin: 0.1em 0;
+text-decoration: none;
+padding-left: 50%;
+}
+
+#drop2:hover, #drop3:hover, #drop4:hover{
+    color: var(--gray-hover);
+}
+
+/*Code to make things disappear when windows shrinks too much*/
+
+@media only screen and (max-width: 1600px) {
+    .circle {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    .circle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar-right {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .dropdown {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .box {
+        margin-left: 0;
+    }
+}
