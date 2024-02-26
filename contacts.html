@@ -54,15 +54,17 @@
     </header>
 
 
-      <form method="post" action="./insert.php"> 
-
-        <input type="text" name="name" id="name" value="" placeholder="Enter your Name">
-
-        <input type="text" id="email" name="email" value="" placeholder="Enter your Email">
-    
-        <textarea id="comment" name="comment" rows="5" cols="40" placeholder="Enter your Message">
-    
-        <p><input type="submit"></p>
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+      <fieldset id="fs-frm-inputs">
+        <label for="full-name">Name</label>
+        <input type="text" name="name" id="full-name" placeholder="Enter your Name" required="">
+        <label for="email-address">Email Address</label>
+        <input type="email" name="_replyto" id="email-address" placeholder="example@email.com" required="">
+        <label for="message">Message</label>
+        <textarea rows="5" name="message" id="message" placeholder="Enter your message." required=""></textarea>
+        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+      </fieldset>
+      <input type="submit" value="Submit">
     </form>
 <script src="./script.js"></script>
 
